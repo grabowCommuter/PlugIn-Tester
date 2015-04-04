@@ -1,0 +1,30 @@
+{
+    "moduleId" : " ... the name of the github repository ...",
+    "title" : "Template",
+    "subtitle" : "Template for PlugIns",
+    
+    "backButton" : false,
+    "enableGPS" : false,
+    "zoomControl" : false,
+    "screenLockRot" : false,
+    "reload" : false,
+    
+    "shouldOverrideUrlLoading1" : null,
+    "shouldOverrideUrlLoading2" : null,
+
+    "loadUrl" : null,
+
+    "loadDataWithBaseUrl1" : null,
+    "loadDataWithBaseUrl2" : null,
+    "loadDataWithBaseUrl3" : null,
+    "loadDataWithBaseUrl4" : "utf-8",
+    "loadDataWithBaseUrl5" : null,
+					
+    "onPageFinishedLoadUrl1" : null,
+    "onPageFinishedLoadUrl2" : null,
+    "onPageFinishedLoadUrl3" : null,
+    "onPageFinishedLoadUrl4" : null,
+    "onPageFinishedLoadUrl5" : null,
+					
+    "browerLaunchLink" : null
+}
