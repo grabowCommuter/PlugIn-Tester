@@ -13,5 +13,5 @@
     
     "loadUrl" : "https://www.google.de/maps/@#lat#,#lng#,#zoom#z/data=!3m1!1e3?hl=en",
     				
-    "browerLaunchLink" : "http://maps.google.com"
+    "browserLaunchLink" : "http://maps.google.com"
 }

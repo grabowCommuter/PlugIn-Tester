@@ -60,7 +60,7 @@ public class MainActivity extends Activity {
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
 	}	
-	 
+	   
 	public class PlaceholderFragment extends Fragment {
 		public PlaceholderFragment() {
 		}
@@ -89,7 +89,7 @@ public class MainActivity extends Activity {
 			}
 
 			wv = new WebView(getActivity());
-						
+						 
 			// Must be - security is alwasy an issue		
 			wv.getSettings().setJavaScriptEnabled(true);
 			wv.getSettings().setDomStorageEnabled(true);
@@ -425,10 +425,10 @@ public class MainActivity extends Activity {
 			
 			// Load your Script (e.g. plugin.js) form the assets-folder of this project
 			// Example 1: 
-			// String myJsonStr = readFileFromAsset("alert_confirm_promt.json");
+			String myJsonStr = readFileFromAsset("alert_confirm_promt.json");
 			
 			// Example 2: 
-			String myJsonStr = readFileFromAsset("speedometer_digital.json");
+			// String myJsonStr = readFileFromAsset("speedometer_digital.json");
 
 			// Example 3: 
 			// String myJsonStr = readFileFromAsset("google_satellite.json");
@@ -481,8 +481,8 @@ public class MainActivity extends Activity {
 				final String onPageFinishedLoadUrl5 = replace(myObj.optString(
 						"onPageFinishedLoadUrl5", null));
 				
-				String browerLaunchLink = replace(myObj.optString(
-						"browerLaunchLink", null));
+				String browserLaunchLink = replace(myObj.optString(
+						"browserLaunchLink", null));
 
 				if (DEBUG) {
 					Log.i("HAG", "backButton: " + backButton);
@@ -508,7 +508,7 @@ public class MainActivity extends Activity {
 					Log.i("HAG", "onPageFinishedLoadUrl4: " + onPageFinishedLoadUrl4);
 					Log.i("HAG", "onPageFinishedLoadUrl5: " + onPageFinishedLoadUrl5);
 					
-					Log.i("HAG", "browerLaunchLink: " + browerLaunchLink);
+					Log.i("HAG", "browserLaunchLink: " + browserLaunchLink);
 				}
 
 				// Execute the scripts
@@ -557,7 +557,7 @@ public class MainActivity extends Activity {
 							loadDataWithBaseUrl4, loadDataWithBaseUrl5);
 				}
 
-				this.browserLaunchLink = browerLaunchLink;
+				this.browserLaunchLink = browserLaunchLink;
 
 
 			} catch (JSONException e) {
