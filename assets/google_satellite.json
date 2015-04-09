@@ -4,9 +4,10 @@
     "subtitle" : "Google Maps Satellite View",
     
     "backButton" : false,
-    "enableGPS" : false,
+    "enableGPS" : true,
     "zoomControl" : false,
     "screenLockRot" : false,
+    "reload" : true,
     
     "shouldOverrideUrlLoading1" : "http",
     "shouldOverrideUrlLoading2" : "https",

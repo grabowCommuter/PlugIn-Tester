@@ -1,5 +1,5 @@
 {
-    "moduleId" : " ... the name of the github repository ...",
+    "moduleId" : "grabowCommuter/Speedometer",
     "title" : "Speedometer",
     "subtitle" : "A digital Speedometer",
     
@@ -93,7 +93,10 @@
                 unit2 = localStorage.unit2;
                 if (unit1 == null) {
                     unit1 = 'km/h';
-                    unit2 = 'km';                    
+                    unit2 = 'km';
+                    alert('Do not rely on these values! Values may be wrong. This is for experimental usage only.');
+                    localStorage.unit1 = unit1;	
+                    localStorage.unit2 = unit2;
                 }
                 showValues();
             }

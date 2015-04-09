@@ -16,15 +16,11 @@
 
     "loadDataWithBaseUrl1" : null,
     "loadDataWithBaseUrl2" : null,
-    "loadDataWithBaseUrl3" : null,
+    "loadDataWithBaseUrl3" : "text/html",
     "loadDataWithBaseUrl4" : "utf-8",
     "loadDataWithBaseUrl5" : null,
 					
-    "onPageFinishedLoadUrl1" : null,
-    "onPageFinishedLoadUrl2" : null,
-    "onPageFinishedLoadUrl3" : null,
-    "onPageFinishedLoadUrl4" : null,
-    "onPageFinishedLoadUrl5" : null,
-					
+    "onPageFinishedLoadUrl" : null,
+    			
     "browserLaunchLink" : null
 }
