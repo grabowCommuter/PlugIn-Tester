@@ -41,35 +41,27 @@ The PlugIn is a JSON-Object consisting of following key-value-pairs:
 
 **`"reload" : false`**,  // Optional (default: false): Enable clean-reload-feature (true) or disable clean-and-reload (false). If true, clean&reload will delete all cookies and local storage and the PlugIn will be reloaded. 
 
-**`"shouldOverrideUrlLoading1" : null`**,  // Optional; default: null: Specify the url or prefix of the url which is handled by your PlugIn. (If you want every webpage to be handled by your PlugIn define „http“ as prefix).
+**`"shouldOverrideUrlLoading1" : null`**,  // Optional (default: null): Specify the url or prefix of the url which is handled by your PlugIn. (If you want every webpage to be handled by your PlugIn define „http“ as prefix).
 
-**`"shouldOverrideUrlLoading2" : null`**, // Optional; default: null: Specify an alternative url or alternative  prefix of the url which is handled by your PlugIn. (Often, an alternative to „http“ is „https“).
+**`"shouldOverrideUrlLoading2" : null`**, // Optional (default: null): Specify an alternative url or alternative  prefix of the url which is handled by your PlugIn. (Often, an alternative to „http“ is „https“).
 
-**`"loadUrl" : null`**, // Optional, default: null: Specify an Url, which is called by your PlugIn (e.g. http://www.google.com/maps/`). If set to null, loadUrl() is not called. More info at Android documentation.
+**`"loadUrl" : null`**, // Optional (default: null): Specify an Url, which is called by your PlugIn (e.g. `http://www.google.com/maps/`). If set to null, loadUrl() is not called. More info at [Android documentation](http://developer.android.com/reference/android/webkit/WebView.html#loadUrl%28java.lang.String%29).
 
     
-**`"loadDataWithBaseUrl1" : null`**, // Optional, default null: Instead of loadUrl(), you can use loadDataWithBaseUrl() for loading a script (see the Android Documentation for more information about loadDataWithBaseUrl() ). If set to null, no base url is specified.
+**`"loadDataWithBaseUrl1" : null`**, // Optional (default: null): Instead of loadUrl(), you can use loadDataWithBaseUrl() for loading a script (see the [Android Documentation](http://developer.android.com/reference/android/webkit/WebView.html#loadDataWithBaseURL%28java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String%29) for more information about loadDataWithBaseUrl() ). If set to null, no base url is specified.
 
-**`"loadDataWithBaseUrl2" : null`**, // Optional, default null: Specify an Script, which is executed. If set to null, loadDataWitnBaseUrl() is not executed.
+**`"loadDataWithBaseUrl2" : null`**, // Optional (default: null): Specify an Script, which is executed. If set to null, loadDataWitnBaseUrl() is not executed.
 
-**`"loadDataWithBaseUrl3" : null`**, // Optional, default „text/html“: Specify the mime-type
+**`"loadDataWithBaseUrl3" : null`**, // Optional (default: "text/html"): Specify the mime-type.
 
-**`"loadDataWithBaseUrl4" : "utf-8"`**,  // Optional, default „utf-8“: Specify the encoding.
+**`"loadDataWithBaseUrl4" : "utf-8"`**,  // Optional (default: "utf-8"): Specify the encoding.
  
-**`"loadDataWithBaseUrl5" : null`**, // Optional, default null: The Url of a webpage to use as the history entry.
+**`"loadDataWithBaseUrl5" : null`**, // Optional (default: null): The Url of a webpage to use as the history entry.
 					
     
-**`"onPageFinishedLoadUrl1" : null`**, // Optional, default null:  If you want to execute a script after the page has been loaded, you can specify the script here. It will be executed in the onPageFinished()-method. The parameters are the same as by loadDataWithBaseUrl(). If set to null, no base url is specified.
-
-**`"onPageFinishedLoadUrl2" : null`**, // / Optional, default null: Specify a script, which is executed. If set to null, loadDataWitnBaseUrl() is not executed.
-
-**`"onPageFinishedLoadUrl3" : null`**, // Optional, default „text/html“: Specify the mime-type
-
-**`"onPageFinishedLoadUrl4" : „utf-8“`**, // Optional, default „utf-8“: Specify the encoding. 
-
-**`"onPageFinishedLoadUrl5" : null`**, // Optional, default null: The Url of a webpage to use as the history entry.
+**`"onPageFinishedLoadUrl" : null`**, // Optional (default: null):  If you want to load a other page or execute a script after the page has been loaded, you can specify this here. The method will be executed in the onPageFinished()-method. The parameters are the same as by loadUrl(). If set to null, the method will not be called. (If you want to execute a javascript, the onPageFinishedLoadUrl-value must start with the string `javascript:` . E.g. `"onPageFinishedLoadUrl" : "javascript: var x = 42; alert('Value of x: ' + x);"`. (See [Android documentation](http://developer.android.com/reference/android/webkit/WebView.html#loadUrl%28java.lang.String%29)).
 					
-**`"browserLaunchLink" : null`** // Optional, default null: Specify the website, which should be loaded with the options menu „launch in browser“. If set to null, this options menu item is not shown.
+**`"browserLaunchLink" : null`** // Optional (default: null): Specify the website, which should be loaded with the options menu „launch in browser“. If set to null, this options menu item is not shown.
 
 }
 
@@ -89,7 +81,7 @@ An example of a simple JSON-Object loading google maps satellite view:
         "shouldOverrideUrlLoading1" : "http",
         "shouldOverrideUrlLoading2" : "https",
         
-        "loadUrl" : "https://www.google.de/maps/@#lat#,#lng#,#zoom#z/data=!3m1!1e3?hl=en",
+        "loadUrl" :  "https://www.google.de/maps/@#lat#,#lng#,#zoom#z/data=!3m1!1e3?hl=en",
         				
         "browserLaunchLink" : "http://maps.google.com"
     }
